@@ -7,9 +7,9 @@ jobs:
     needs: build-project
     steps:
     - name: Download site content
-     uses: actions/download-artifact@v4
-     with:
-      name: static-site
+      uses: actions/download-artifact@v4
+      with:
+        name: static-site
     - name: View content of artifact
       run: ls -R
   build-project:

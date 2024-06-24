@@ -1,5 +1,9 @@
 name: Build Next.js web application
-on: push
+on: 
+  push:
+    branches:
+      - main
+      - '!refs/tags/*'  # Exclude tag pushes to prevent re-triggering
 jobs:
   release-project:
     name: Release project

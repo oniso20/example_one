@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - '!refs/tags/*'  # Exclude tag pushes to prevent re-triggering
+  workflow_dispatch:
 jobs:
   release-project:
     name: Release project

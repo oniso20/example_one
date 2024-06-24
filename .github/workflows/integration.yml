@@ -9,7 +9,7 @@ jobs:
     - name: Download site content
       uses: actions/download-artifact@v4
       with:
-        name: static-site
+        name: Static site
     - name: View content of artifact
       run: ls -R
   build-project:

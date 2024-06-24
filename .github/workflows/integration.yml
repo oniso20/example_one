@@ -9,9 +9,14 @@ jobs:
     - name: Download site content
       uses: actions/download-artifact@v4
       with:
-        name: Static site
+        name: static-site
     - name: View content of artifact
       run: ls -R
+    - name: Archive site content
+      uses: thedoctor0/zip-release@master
+      with:
+        type: 'zip'
+        filename: 'site.zip'
   build-project:
     name: Build project
     runs-on: ubuntu-latest
@@ -25,5 +30,5 @@ jobs:
     - name: Upload static sit site content
       uses: actions/upload-artifact@v4
       with: 
-        name: Static site
+        name: static-site
         path: .next/
